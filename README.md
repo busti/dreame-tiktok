@@ -1,6 +1,6 @@
 # Funny TikTok lady voice pack builder
 
-Give some personality to your Xiaomi vacuum by creating your own funny TikTok lady voice pack.
+Give some personality to your dreame vacuum by creating your own funny TikTok lady voice pack.
 
 The script reads the text from the csv file in the funny TikTok ladys' voice and packages it for upload to your vacuum. It's been tested with a gen1 running [Valetudo](https://valetudo.cloud/) but should also work with other generations and with other ways of installing the voice pack.
 
@@ -19,7 +19,7 @@ You're doing a great job of disappointing me. Go on, go to the [releases page](h
 ## Usage
 
 - `git clone` this repo
-- Change the lines in the csv file from the xiaomi default to something you want the funny TikTok lady to say.
+- Change the lines in the csv file from the dreame default to something you want the funny TikTok lady to say.
 - Run `./01-speak.sh` to generate the speech.
 - Run `./02-process.sh` to normalize the volume.
 - Run `./03-package.sh` to package the wav files.
@@ -28,18 +28,6 @@ You're doing a great job of disappointing me. Go on, go to the [releases page](h
 
 If you created a custom csv file, please be so kind to share it back so others can benefit from it.
 
-## Tips
-
-### Speak when bumping into something
-
-Now we have this great voice installed, wouldn't it be great if the funny TikTok lady would speak a bit more? How about a custom voice pack and configuration for this: [roborock-oucher](https://github.com/porech/roborock-oucher)?
-
-### Further automations
-
-If you are using [Home Assistant](https://www.home-assistant.io/), you can combine the control of your vacuum with other automations. How about a [soundtrack](https://www.youtube.com/watch?v=Y6ljFaKRTrI) or some light effects? The only limit is your willingness to release your inner geek - you know you want to ;).
-
 ## Credits
-
-- Thanks to the folks over at [DustCloud](https://github.com/dgiese/dustcloud) for freeing our vacuums (and [transcribing the default voice](https://github.com/dgiese/dustcloud/blob/master/devices/xiaomi.vacuum/audio_generator/language/audio_en.csv)).
 - [Valetudo](https://valetudo.cloud/) for the great ux.
 - [weilbyte](https://github.com/Weilbyte/tiktok-tts) for researching the API to the funny TikTok lady voice generator.

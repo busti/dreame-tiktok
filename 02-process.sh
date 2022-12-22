@@ -5,5 +5,11 @@
 
 inputdir=output/speech
 outputdir=output/result
+sixteenkdir=output/16k
 
-ffmpeg-normalize $inputdir/*.wav --normalization-type peak --target-level 0 -of $outputdir -ext wav
+mkdir -p $sixteenkdir
+
+ffmpeg-normalize $inputdir/*.ogg -c:a libopus --normalization-type peak --target-level 0 -of $outputdir -ext ogg
+for file in $outputdir/*.ogg; do
+    ffmpeg -i "$file" -ar 16000 "$sixteenkdir/${file#output/result/}"
+done

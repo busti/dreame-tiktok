@@ -20,6 +20,6 @@ while IFS=, read -r name quotedtext; do
       -H 'Content-Type: application/json' \
       -d '{"text":"'"$text"'", "voice": "en_us_001"}' \
       'https://tiktok-tts.weilnet.workers.dev/api/generation' \
-      | jq -r '.data' | base64 -d | ffmpeg -f mp3 -i pipe:0 -f wav -ar 16000 -ac 1 -y "$filename"
+      | jq -r '.data' | base64 -d | ffmpeg -f mp3 -i pipe:0 -f ogg -acodec libvorbis -ac 1 -ar 16000 -y "$filename"
   fi
 done < $inputfile
